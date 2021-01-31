@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const request = require('node-superfetch');
 const yuricanvas = require("yuri-canvas");
-const huderlog = ('NzEzODM3NjU2MjMyMTY1Mzc3.Xsl7Hw.6wGqM2QWlwuizM57Aom89ntjuqI');
+const huderlog = ('SUPER-SECRET-BOT');
 
 client.on('ready', () => {
    console.log(client.user.tag);
@@ -40,13 +40,14 @@ const command = args.shift().toLowerCase();
        .addField("**invert**", "Inverts an avatar.")
         .addField("**rainbow**", "Rainbow an avatar.")
          .addField("**grey**", "Make an avatar gray.")
-          .addField("**trump**", "Now it's law.")
+          .addField("**trigger**", "Make a gif with an avatar.")
 
 message.author.send({ embed: helpcmd });
+     
   }
   
 
-  if (message.content === "!trigger") {
+  if (command === "trigger") {
     let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
     let image = await yuricanvas.trigger(avatar);
     let attachment = new Discord.MessageAttachment(image, "triggered.gif");
