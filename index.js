@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
   res.end('hi!\n'+
   'this is the official web of Huder!\n'+
   `here all Huder's commands.\n`+
-        ` \n`+
+  ` \n`+
   `FUN:\n`+
   ` \n`+
   `/h.triggered, make a triggered gif with an avatar.\n`+
@@ -21,16 +21,16 @@ const server = http.createServer((req, res) => {
   `/h.pixel, pixelate an avatar.\n`+
   `/h.invert, invert the colours from an avatar.\n`+
   `/h.grey, make an avatar grey.\n`+
-   ` \n`+
+  ` \n`+
   `UTILS: \n`+
-    ` \n`+
+  ` \n`+
   `/h.invite, invite Huder to ur server.\n`+
-      ` \n`+
-       ` \n`+
-        `if you want invite huder: https://bit.ly/3pFAm4g \n`+
-          ` \n`+
-            ` \n`+
-              `Copyright (c) 2021 huderzo - https://github.com/huderzo`);
+  ` \n`+
+  ` \n`+
+  `if you want invite huder: https://bit.ly/3pFAm4g \n`+
+  ` \n`+
+  ` \n`+
+  `Copyright (c) 2021 huderzo - https://github.com/huderzo`);
 });
 server.listen(3000);
 bot.commands = new Collection();
