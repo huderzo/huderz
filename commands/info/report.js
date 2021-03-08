@@ -1,7 +1,7 @@
 const canvacord = require("canvacord");
 const Discord = require('discord.js')
  module.exports={
-   name: "report",
+   name: "report", //yes it's a simple command, i know
    description: "help command",
    usage: "[ only use ]",
    category: "info",
