@@ -2,20 +2,23 @@ const canvacord = require("canvacord");
 const Discord = require('discord.js')
  
  module.exports={
-   name: "triggered",
+   name: "brightness",
    description: "make a triggered gif with an avatar.",
    usage: "[ user mention or not ]",
    category: "misc",
    run: async(bot,message,args)=>{
- 
- let url = args.join(" ")
-  if(!url) return message.channel.send(`how to use "triggered":\n`+
- `**/h.triggered** <url> or **/h.triggered** <@mention>`);
+
+const url = args.join(" ")
+
+  if(!args[0]) return message.channel.send(`how to use "brightness":\n`+
+ `**/h.brightness** <@mention> or **/h.brightness** <url>`);
+
   let supbro = message.mentions.users.first()
 if (!supbro) {
 
-        let image = await canvacord.Canvas.trigger(url);
-        let attachment = new Discord.MessageAttachment(image, "triggered.gif");
+            let image = await canvacord.Canvas.brightness(url, 50);
+        let attachment = new Discord.MessageAttachment(image, "brightness.png");
+
         return message.channel.send(attachment);
 
     } else {
@@ -23,10 +26,10 @@ if (!supbro) {
 
 
         let avatar = supbro.displayAvatarURL({ dynamic: false, format: 'png', size: 1024 });
-        let image = await canvacord.Canvas.trigger(avatar);
-        let attachment = new Discord.MessageAttachment(image, "triggered.gif");
+        let image = await canvacord.Canvas.brightness(avatar, 50);
+        let attachment = new Discord.MessageAttachment(image, "brightness.png");
         return message.channel.send(attachment);
 
     }
-  }
+   }
  }

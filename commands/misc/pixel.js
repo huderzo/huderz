@@ -8,12 +8,14 @@ const Discord = require('discord.js')
    category: "misc",
    run: async(bot,message,args) => {
 
+ let url = args.join(" ")
+  if(!url) return message.channel.send(`how to use "pixel":\n`+
+ `**/h.pixel** <url> or **/h.pixel** <@mention>`);
            let supbro = message.mentions.users.first()
 if (!supbro) {
 
 
-        let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        let image = await canvacord.Canvas.pixelate(avatar);
+        let image = await canvacord.Canvas.pixelate(url);
         let attachment = new Discord.MessageAttachment(image, "pixel.jpg");
         return message.channel.send(attachment);
       message.channel.stopTyping()      
@@ -21,7 +23,7 @@ if (!supbro) {
 
  
 
-        let avatar = supbro.displayAvatarURL({ dynamic: false, format: 'png' });
+        let avatar = supbro.displayAvatarURL({ dynamic: false, format: 'png', size: 1024 });
         let image = await canvacord.Canvas.pixel(avatar);
         let attachment = new Discord.MessageAttachment(image, "pixel.jpg");
         return message.channel.send(attachment);

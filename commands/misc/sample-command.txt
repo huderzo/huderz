@@ -11,5 +11,6 @@ const Discord = require('discord.js')
 //here comes the command
 
  }
+ }
 
  huder
