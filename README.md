@@ -1,13 +1,9 @@
-# Huder's documentary
-
-```
-This is the documentary from Huder bot
-```
 
 # About Huder
 <img src="https://cdn.discordapp.com/attachments/792604977201152022/805553271417864212/99fb1d3212ea00cc9a4d1eb672a0d0c6.jpg">
+```
 Huder is simple bot who uses discord.js
-
+```
 I will update this bot sometimes, or not, i don't know.
 
 # Invite
